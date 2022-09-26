@@ -3,28 +3,32 @@
         box-sizing: border-box;
         text-decoration: none;
         list-style-type: none;
-        font-size: 16px;
         color: white;
         font-family: 'Open Sans', sans-serif;
+     }
+     html {
+        /* font-size: 62.5%; */
      }
 
 /* ******** GENERALES ******** */
 
 hr {
     width: 100vw;
-    border: 1px rgba(89, 87, 87, 0.259) solid ;
-
-    
+    border: 1px rgba(89, 87, 87, 0.259) solid ; 
+}
+body {
+    width: 100vw;
+    height: 100vh;
 }
 
 /* MAIN CONTAINER */
 .netflix-container{
     background-color: black;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:  10% 70% 20%;
+    grid-template-rows:  10% 80% 20%;
 }
 
 
@@ -48,8 +52,9 @@ hr {
     text-align: center;   
 }
 .logo {
+    margin-top: 10px;
     width: 80%;
-    height: 80%;  
+    height: 80%;    
 }
 
 
@@ -69,6 +74,7 @@ hr {
 }
 .nav-left ul li {
     margin-left: 30px;
+    font-size: 16px;
 }
 
 
@@ -79,16 +85,131 @@ hr {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
 .right {
-    margin-left: 30px;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 20px;
+   
+}
+.lupa{
+    background-image: url(../Images/lupa-blanca.png);
+}
+.gif{
+    background-image: url(../Images/giftwhite.png);
+}
+.bell{
+    background-image: url(../Images/campana-blanca.png);
+}
+#user-pic{
+    background-image: url(../Images/avatar-netflix.png);
+    width: 50px;
+    height: 40px;
+    margin-left: 15px;
+}
+
+.arrow{
+    background-image: url(../Images/flecha-blanca.png);
 }
 
 /* MAIN CONTAINER */
+/* Especificaciones generales del Main container */
 .main-container {
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 98.5%;
+    height: 100%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr 2fr 0.5fr;
+}
+
+/* Titulos */
+h2 {
+    padding-top: 30px
+}
+.titulo-pelis{
+    grid-row: 2 / 2;
+    grid-column: 1 / 6;
     
+}
+
+.titulo-series{
+    grid-row: 4 / 5;
+    grid-column: 1 / 6;   
+}
+.box{
+     width: 100%;
+     height: 100%;
+     background-size: contain;
+     background-repeat: no-repeat;
+  }
+.poster{
+    gap: 10px;
+}
+
+
+
+/* MOVIES POSTERS */
+ .posters-pelis{
+    grid-column: 1 / 6 ;
+    grid-row: 3 / 4 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ }
+#a {
+    background-image: url(../Images/Series/breakin.webp);
+    grid-column: 1 / 2;
+}
+#b {
+    background-image: url(../Images/Series/ino.jpg);
+    grid-column: 2 / 3;
+}
+#c {
+    background-image: url(../Images/Series/ricky.webp);
+    grid-column: 3 / 4;
+}
+#d {
+    background-image: url(../Images/Series/sex.jpg);
+    grid-column: 4 / 5;
+}
+#e {
+    background-image: url(../Images/Series/viki.webp);
+    grid-column: 5 / 6;
+}
+    
+
+ /* SERIES POSTERS */
+.poster-series {
+    grid-column: 1 / 6 ;
+    grid-row: 5 / 7 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#f {
+    background-image: url(../Images/pelis/el.webp);
+    grid-column: 1 / 2;
+} 
+#g {
+    background-image: url(../Images/pelis/iji.jpg);
+    grid-column: 2 / 3;
+}
+#h {
+    background-image: url(../Images/pelis/ijij.webp);
+    grid-column: 3 / 4;
+}
+#i {
+    background-image: url(../Images/pelis/oij.jpg);
+    grid-column: 4 / 5;
+}
+#j {
+    background-image: url(../Images/pelis/oko.webp);
+    grid-column: 5 / 6;
 }
 
 
@@ -97,19 +218,20 @@ hr {
 
 /* FOOT CONTAINER */
 .foot-container{
-   
+    background-color: black;
     width: 100%;
     height: 100%;
     grid-column: 1 / 7;
-    grid-row: 3 / 4;
+    grid-row: 3 / 5;
 }
 .foot-container ul{
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     justify-content: space-evenly;
     text-align: center;
     margin-top: 50px;
+    padding-bottom: 10px;
 }
 
    
